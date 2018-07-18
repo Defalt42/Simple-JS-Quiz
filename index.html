@@ -5,80 +5,22 @@
     <title>JS Quiz</title>
   </head>
   <body>
-    <div id="quiz-container">
-      <h1>Star Wars Quiz</h1>
-      <ol id="quiz">
-        <li class="question">
-          <p>Who is Darth Vader?</p>
-          <div>
-              <input type="radio" id="question1_answer1" name="answer1" />
-              <label for="question1_answer1">Luke Skywalker</label>
-          </div>
-
-          <div>
-              <input type="radio" id="question1_answer2" name="answer1" />
-              <label for="question1_answer2">Princess Laya</label>
-          </div>
-
-          <div>
-              <input type="radio" id="question1_answer3" name="answer1" />
-              <label for="question1_answer3">Hans Solo</label>
-          </div>
-
-          <div>
-              <input type="radio" id="question1_answer4" name="answer1" />
-              <label for="question1_answer4">Anakin Skywalker</label>
-          </div>
-        </li>
-
-        <li class="question">
-          <p>What is the name of episode three?</p>
-          <div>
-              <input type="radio" id="question2_answer1" name="answer2" />
-              <label for="question2_answer1">Revenge of the Sith</label>
-          </div>
-
-          <div>
-              <input type="radio" id="question2_answer2" name="answer2" />
-              <label for="question2_answer2">A New Hope</label>
-          </div>
-
-          <div>
-              <input type="radio" id="question2_answer3" name="answer2" />
-              <label for="question2_answer3">Return of the Jedi</label>
-          </div>
-
-          <div>
-              <input type="radio" id="question2_answer4" name="answer2" />
-              <label for="question2_answer4">The Phantom Menace</label>
-          </div>
-        </li>
-
-        <li class="question">
-          <p>Who is Anakin Skywalker's son?</p>
-          <div class="answer">
-              <input type="radio" id="question3_answer1" name="answer3" />
-              <label for="question3_answer1">Luke Skywalker</label>
-          </div>
-
-          <div class="answer">
-              <input type="radio" id="question3_answer2" name="answer3" />
-              <label for="question3_answer2">Chewbacca</label>
-          </div>
-
-          <div class="answer">
-              <input type="radio" id="question3_answer3" name="answer3" />
-              <label for="question3_answer3">The Great Gambini</label>
-          </div>
-
-          <div class="answer">
-              <input type="radio" id="question3_answer4" name="answer3" />
-              <label for="question3_answer4">Darth Mal</label>
-          </div>
-        </li>
-      </ol>
+    <div class="quiz-container">
+      <div id="quiz">
+        <h1>Star Wars Quiz</h1>
+        <hr />
+        <p id="question">Who is Darth Vader?</p>
+        <div class="buttons">
+          <button id="b0"><span id="c0"></span></button>
+          <button id="b1"><span id="c1"></span></button>
+          <button id="b2"><span id="c2"></span></button>
+          <button id="b3"><span id="c3"></span></button>
+        </div>
+        <hr />
+        <footer>
+          <p id="progress">Question x of n</p>
+        </footer>
+      </div>
     </div>
-    <button type="submit" name="button">Submit</button>
-    <script src="quiz.js"></script>
   </body>
 </html>
