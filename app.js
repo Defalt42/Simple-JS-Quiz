@@ -1,3 +1,7 @@
+function populateQuestions() {
+
+}
+
 var questions = [
   new Question("Who is Darth Vader?",
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
@@ -12,6 +16,18 @@ var questions = [
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
   "Anakin Skywalker"),
 ];
-function populateQuestions() {
 
-}
+// questions.forEach(function(question) {
+//   console.log("Question: " + question.text + "\nAnswer: " + question.answer
+//   + "\nChoice: Luke Skywalker" + "(" + question.correctAnswer("Anakin Skywalker")
+//   + ")");
+// });
+//
+// var quiz = new Quiz(questions);
+//
+// console.log(quiz.getCurrentQuestion());
+//
+// quiz.guess("Anakin Skywalker");
+//
+// console.log(quiz.score);
+// console.log(quiz.getCurrentQuestion());
