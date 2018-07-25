@@ -1,5 +1,18 @@
-function populateQuestions() {
+function populateQuestion() {
+  if(quiz.isEnded()) {
+    // display score
+  } else {
+    // display question
+    var qElement = document.getElementById('question');
+    qElement.innerHTML = quiz.getCurrentQuestion().text;
 
+    // display choices
+    var choices = quiz.getCurrentQuestion().choices;
+    for(var i = 0; i < choices.length; i++) {
+      var choice = document.getElementById('c' + i);
+      choice.innerHTML = choices[i];
+    }
+  }
 }
 
 var questions = [
@@ -14,9 +27,12 @@ var questions = [
   "Anakin Skywalker"),
   new Question("What is the name of the sixth episode?",
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
-  "Anakin Skywalker"),
+  "Anakin Skywalker")
 ];
 
+var quiz = new Quiz(questions);
+
+populateQuestion();
 // questions.forEach(function(question) {
 //   console.log("Question: " + question.text + "\nAnswer: " + question.answer
 //   + "\nChoice: Luke Skywalker" + "(" + question.correctAnswer("Anakin Skywalker")
