@@ -1,6 +1,7 @@
 function populateQuestion() {
   if(quiz.isEnded()) {
     // display score
+    showScore();
   } else {
     // display question
     var qElement = document.getElementById('question');
@@ -15,6 +16,9 @@ function populateQuestion() {
   }
 }
 
+function showScore() {
+  
+}
 var questions = [
   new Question("Who is Darth Vader?",
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
