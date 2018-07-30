@@ -1,12 +1,12 @@
 body {
   background: #778899;
-  font-family: helvetica;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .quiz-container {
   background: #fff;
   width: 70%;
-  max-width: 600px;
+  max-width: 650px;
   border-radius: 30px;
   padding: 30px;
   margin: 0 auto;
@@ -16,11 +16,11 @@ body {
 
 .quiz-container h1 {
   text-align: center;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#quiz p#question {
-  font-size: 18px;
+.quiz-container #question {
+  font-size: 30px;
+  color: #5a6772;
 }
 
 .buttons {
@@ -29,12 +29,26 @@ body {
 
 #b0, #b1, #b2, #b3 {
   border-radius: 50px;
-  width: 200px;
+  width: 250px;
   font-size: 20px;
-  background: #546270;
-  margin: 10px 60px 10px 0;
+  color: #fff;
+  border: 1px solid #1d3c6a;
+  background: #778897;
+  margin: 10px 40px 10px 0;
+  padding: 10px 10px;
+}
+
+#b0:hover, #b1:hover, #b2:hover, #b3:hover {
+  cursor: pointer;
+  background-color: #57636e;
+}
+
+#b0:focus, #b1:focus, #b2:focus, #b3:focus {
+  outline: 0;
 }
 
 #progress {
+  color: #2b2b2b;
   text-align: right;
+  font-size: 18px;
 }
