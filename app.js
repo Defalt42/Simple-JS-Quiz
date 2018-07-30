@@ -20,14 +20,14 @@ var questions = [
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
   "Anakin Skywalker"),
   new Question("What is the name of the third episode?",
-  ["Revenge of the Sith", "Return of the Jedi", "A New Hope", "Attack of the Clones"],
+  ["Return of the Jedi", "Revenge of the Sith", "A New Hope", "The Empire Strikes Back"],
   "Revenge of the Sith"),
   new Question("Who is Anakin Skywalker's son?",
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
-  "Anakin Skywalker"),
+  "Luke Skywalker"),
   new Question("What is the name of the sixth episode?",
-  ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
-  "Anakin Skywalker")
+  ["Return of the Jedi", "Revenge of the Sith", "A New Hope", "The Empire Strikes Back"],
+  "Return of the Jedi")
 ];
 
 var quiz = new Quiz(questions);
