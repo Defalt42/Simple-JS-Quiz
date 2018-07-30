@@ -14,12 +14,18 @@ function populateQuestion() {
       choice.innerHTML = choices[i];
       guess("b" + i, choices[i]);
     }
+    showProgress();
   }
+}
+
+function showProgress() {
+    var currentQuestionNum = quiz.questionIndex + 1;
+    var progress = document.getElementById("progress");
+    progress.innerHTML = "Question " + currentQuestionNum + " of " + quiz.questions.length;
 }
 
 function guess(id, guess) {
     var button = document.getElementById(id);
-
     button.addEventListener('click', function() {
       quiz.guess(guess);
       populateQuestion();
