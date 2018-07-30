@@ -12,13 +12,28 @@ function populateQuestion() {
     for(var i = 0; i < choices.length; i++) {
       var choice = document.getElementById('c' + i);
       choice.innerHTML = choices[i];
+      guess("b" + i, choices[i]);
     }
   }
 }
 
-function showScore() {
-  
+function guess(id, guess) {
+    var button = document.getElementById(id);
+
+    button.addEventListener('click', function() {
+      quiz.guess(guess);
+      populateQuestion();
+    });
 }
+
+function showScore() {
+  var resultsHTML = "<h1>Results</h1>";
+  resultsHTML += "<h2 id='score'>Your Score: " + Quiz.score + "</h2>";
+
+  var quiz = document.getElementById("quiz");
+  quiz.innerHTML = resultsHTML;
+}
+
 var questions = [
   new Question("Who is Darth Vader?",
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
