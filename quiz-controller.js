@@ -4,6 +4,10 @@ function Quiz(questions) {
   this.questions = questions;
 }
 
+Quiz.prototype.getScore = function() {
+    return this.score;
+};
+
 Quiz.prototype.getCurrentQuestion = function() {
   return this.questions[this.questionIndex];
 };

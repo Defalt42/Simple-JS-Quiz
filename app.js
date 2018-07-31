@@ -26,16 +26,15 @@ function showProgress() {
 
 function guess(id, guess) {
     var button = document.getElementById(id);
-    button.addEventListener('click', function() {
+    button.onclick = function() {
       quiz.guess(guess);
       populateQuestion();
-    });
+    };
 }
 
 function showScore() {
   var resultsHTML = "<h1>Results</h1>";
-  resultsHTML += "<h2 id='score'>Your Score: " + Quiz.score + "</h2>";
-
+  resultsHTML += "<h2 id='score'>Your Score: " + quiz.getScore() + "</h2>";
   var quiz = document.getElementById("quiz");
   quiz.innerHTML = resultsHTML;
 }
@@ -56,8 +55,8 @@ var questions = [
 ];
 
 var quiz = new Quiz(questions);
-
 populateQuestion();
+
 // questions.forEach(function(question) {
 //   console.log("Question: " + question.text + "\nAnswer: " + question.answer
 //   + "\nChoice: Luke Skywalker" + "(" + question.correctAnswer("Anakin Skywalker")
