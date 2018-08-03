@@ -1,6 +1,7 @@
 function populateQuestion() {
   if(quiz.isEnded()) {
     // display score
+    console.log(quiz);
     showScore();
   } else {
     // display question
@@ -18,12 +19,6 @@ function populateQuestion() {
   }
 }
 
-function showProgress() {
-    var currentQuestionNum = quiz.questionIndex + 1;
-    var progress = document.getElementById("progress");
-    progress.innerHTML = "Question " + currentQuestionNum + " of " + quiz.questions.length;
-}
-
 function guess(id, guess) {
     var button = document.getElementById(id);
     button.onclick = function() {
@@ -32,10 +27,17 @@ function guess(id, guess) {
     };
 }
 
+function showProgress() {
+    var currentQuestionNum = quiz.questionIndex + 1;
+    var progress = document.getElementById("progress");
+    progress.innerHTML = "Question " + currentQuestionNum + " of " + quiz.questions.length;
+}
+
 function showScore() {
+  console.log(quiz);
   var resultsHTML = "<h1>Results</h1>";
   resultsHTML += "<h2 id='score'>Your Score: " + quiz.getScore() + "</h2>";
-  var quiz = document.getElementById("quiz");
+  var q = document.getElementById("quiz");
   quiz.innerHTML = resultsHTML;
 }
 
