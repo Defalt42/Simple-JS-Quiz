@@ -1,7 +1,7 @@
 function populateQuestion() {
   if(quiz.isEnded()) {
     // display score
-    console.log(quiz);
+    // console.log(quiz);
     showScore();
   } else {
     // display question
@@ -34,11 +34,10 @@ function showProgress() {
 }
 
 function showScore() {
-  console.log(quiz);
   var resultsHTML = "<h1>Results</h1>";
   resultsHTML += "<h2 id='score'>Your Score: " + quiz.getScore() + "</h2>";
   var q = document.getElementById("quiz");
-  quiz.innerHTML = resultsHTML;
+  q.innerHTML = resultsHTML;
 }
 
 var questions = [
