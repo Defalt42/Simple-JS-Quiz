@@ -17,6 +17,7 @@ Quiz.prototype.isEnded = function() {
 };
 
 Quiz.prototype.guess = function(answer) {
+  // console.log(this.getCurrentQuestion());
   if(this.getCurrentQuestion().correctAnswer(answer)) {
     this.score++;
   }
