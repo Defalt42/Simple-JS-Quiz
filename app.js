@@ -1,7 +1,6 @@
 function populateQuestion() {
   if(quiz.isEnded()) {
     // display score
-    // console.log(quiz);
     showScore();
   } else {
     // display question
@@ -57,18 +56,3 @@ var questions = [
 
 var quiz = new Quiz(questions);
 populateQuestion();
-
-// questions.forEach(function(question) {
-//   console.log("Question: " + question.text + "\nAnswer: " + question.answer
-//   + "\nChoice: Luke Skywalker" + "(" + question.correctAnswer("Anakin Skywalker")
-//   + ")");
-// });
-//
-// var quiz = new Quiz(questions);
-//
-// console.log(quiz.getCurrentQuestion());
-//
-// quiz.guess("Anakin Skywalker");
-//
-// console.log(quiz.score);
-// console.log(quiz.getCurrentQuestion());
