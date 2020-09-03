@@ -11,17 +11,17 @@
   </head>
   <body>
     <div class="quiz-container">
-      <form>
+      <form class="quiz-selection">
         <div class="form-group">
           <label for="quiz-select">Select a quiz</label>
           <select class="custom-select" id="quiz-select">
             <option selected>Open this select menu</option>
-            <option value="1">Star Wars</option>
+            <option value="Star Wars">Star Wars</option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-      <!-- <div id="quiz">
+      <div id="quiz">
         <h1>Star Wars Quiz</h1>
         <hr style="margin-top: 20px;" />
         <p id="question"></p>
@@ -35,7 +35,7 @@
         <footer>
           <p id="progress">Question x of n</p>
         </footer>
-      </div> -->
+      </div>
     </div>
     <script src="quiz-controller.js"></script>
     <script src="question.js"></script>

@@ -54,5 +54,16 @@ var questions = [
   "Return of the Jedi")
 ];
 
-var quiz = new Quiz(questions);
-populateQuestion();
+document.querySelector(".quiz-selection").addEventListener("submit", function(e) {
+  e.preventDefault();
+  var select = document.querySelector("select");
+  var value = select.options[select.selectedIndex].value;
+
+  if(value === "Star Wars") {
+    var quiz = new Quiz(questions);
+    populateQuestion();
+   }
+});
+
+
+
