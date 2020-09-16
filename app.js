@@ -1,16 +1,17 @@
 function populateQuestion() {
+  console.log(quiz);
   if(quiz.isEnded()) {
     // display score
     showScore();
   } else {
     // display question
-    var qElement = document.getElementById('question');
+    let qElement = document.getElementById('question');
     qElement.innerHTML = quiz.getCurrentQuestion().text;
 
     // display choices
-    var choices = quiz.getCurrentQuestion().choices;
-    for(var i = 0; i < choices.length; i++) {
-      var choice = document.getElementById('c' + i);
+    let choices = quiz.getCurrentQuestion().choices;
+    for(let i = 0; i < choices.length; i++) {
+      let choice = document.getElementById('c' + i);
       choice.innerHTML = choices[i];
       guess("b" + i, choices[i]);
     }
@@ -19,7 +20,7 @@ function populateQuestion() {
 }
 
 function guess(id, guess) {
-    var button = document.getElementById(id);
+    let button = document.getElementById(id);
     button.onclick = function() {
       quiz.guess(guess);
       populateQuestion();
@@ -27,19 +28,19 @@ function guess(id, guess) {
 }
 
 function showProgress() {
-    var currentQuestionNum = quiz.questionIndex + 1;
-    var progress = document.getElementById("progress");
+    let currentQuestionNum = quiz.questionIndex + 1;
+    let progress = document.getElementById("progress");
     progress.innerHTML = "Question " + currentQuestionNum + " of " + quiz.questions.length;
 }
 
 function showScore() {
-  var resultsHTML = "<h1>Results</h1>";
+  let resultsHTML = "<h1>Results</h1>";
   resultsHTML += "<h2 id='score'>Your Score: " + quiz.getScore() + "</h2>";
-  var q = document.getElementById("quiz");
+  let q = document.getElementById("quiz");
   q.innerHTML = resultsHTML;
 }
 
-var questions = [
+let questions = [
   new Question("Who is Darth Vader?",
   ["Luke Skywalker", "Anakin Skywalker", "Your Mom", "Your Dad"],
   "Anakin Skywalker"),
@@ -53,17 +54,19 @@ var questions = [
   ["Return of the Jedi", "Revenge of the Sith", "A New Hope", "The Empire Strikes Back"],
   "Return of the Jedi")
 ];
-
+let quiz = null;
 document.querySelector(".quiz-selection").addEventListener("submit", function(e) {
   e.preventDefault();
-  var select = document.querySelector("select");
-  var value = select.options[select.selectedIndex].value;
-
+  let select = document.querySelector("select");
+  let value = select.options[select.selectedIndex].value;
+  console.log(value);
   if(value === "Star Wars") {
-    var quiz = new Quiz(questions);
-    populateQuestion();
+    quiz = new Quiz(questions);
+   } else {
+     quiz = new Quiz(questions);
    }
 });
+populateQuestion();
 
 
 
